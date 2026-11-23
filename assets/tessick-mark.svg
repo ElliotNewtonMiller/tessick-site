@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 14 108 72" width="108" height="72" fill="none">
+ <title>Tessick</title>
+ <defs>
+  <linearGradient id="g1" x1="12" y1="71.125" x2="116.717" y2="16.467" gradientUnits="userSpaceOnUse">
+   <stop offset="0.019" stop-color="#004ed9"/>
+   <stop offset="0.131" stop-color="#1d71f5"/>
+   <stop offset="0.39" stop-color="#0EA5E9"/>
+   <stop offset="0.587" stop-color="#3ed9ae"/>
+   <stop offset="1" stop-color="#95f19c"/>
+  </linearGradient>
+  <linearGradient id="g2" x1="12" y1="71.125" x2="116.717" y2="16.467" gradientUnits="userSpaceOnUse">
+   <stop offset="0.019" stop-color="#0056d9"/>
+   <stop offset="0.022" stop-color="#1D70F5"/>
+   <stop offset="0.39" stop-color="#0EA5E9"/>
+   <stop offset="0.587" stop-color="#3ed9ae"/>
+   <stop offset="1" stop-color="#95f19c"/>
+  </linearGradient>
+  <linearGradient id="g3" x1="12" y1="15" x2="65" y2="85" gradientUnits="userSpaceOnUse">
+   <stop offset="0" stop-color="#0d2a4d"/>
+   <stop offset="0.252" stop-color="#003d9c"/>
+   <stop offset="0.895" stop-color="#006dcd"/>
+  </linearGradient>
+  <linearGradient id="g4" x1="12" y1="71.125" x2="116.717" y2="16.467" gradientUnits="userSpaceOnUse" href="#g2">
+   <stop offset="0.019" stop-color="#0056d9"/>
+   <stop offset="0.212" stop-color="#1D70F5"/>
+   <stop offset="0.39" stop-color="#0EA5E9"/>
+   <stop offset="0.587" stop-color="#3ed9ae"/>
+   <stop offset="1" stop-color="#95f19c"/>
+  </linearGradient>
+  <linearGradient id="g5" x1="36" y1="27" x2="36" y2="71.375" gradientUnits="userSpaceOnUse" href="#g3"/>
+  <linearGradient id="g6" x1="4.341" y1="66" x2="108" y2="15" gradientUnits="userSpaceOnUse" gradientTransform="translate(5.594327,0.52499)" href="#g4"/>
+  <linearGradient id="g7" x1="16" y1="70" x2="116.717" y2="16.467" gradientUnits="userSpaceOnUse" href="#g1"/>
+ </defs>
+ <path fill="url(#g7)" d="M 12,16 H 78 L 67.007472,27 H 42 v 44.271223 l -12,12 V 27 H 12 Z"/>
+ <path fill="url(#g6)" d="M 42,54.060547 59.527432,71.591885 115.11932,16 H 100.11928 L 59.594327,56.524985 49.564942,46.4956 Z"/>
+ <path fill="url(#g5)" d="M 30,27 H 42 V 52 L 30,64.048568 Z"/>
+</svg>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elliotnewtonmiller.github.io/tessick-site/sitemap.xml
