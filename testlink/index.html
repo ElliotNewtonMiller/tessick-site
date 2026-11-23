@@ -79,7 +79,7 @@
 <section>
   <div class="wrap">
     <div class="section-head">
-      <h2>Two ways across</h2>
+      <h2>Two Ways Across</h2>
       <p class="lead">Most teams start with the XML export: it's quick, and you can try it on one project. The database migration is for when the history matters, or when scripts must keep working on day one.</p>
     </div>
     <div class="table-wrap">
@@ -102,7 +102,7 @@
   <div class="wrap two-col">
     <div>
       <span class="eyebrow">About 15 minutes</span>
-      <h2>Import TestLink's XML export</h2>
+      <h2>XML Import</h2>
       <p>No scripts and no database access:</p>
       <ol>
         <li>In Tessick, create a project with the <strong>same prefix</strong> as in TestLink, so <code>SHOP-331</code> stays <code>SHOP-331</code>.</li>
@@ -140,7 +140,7 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Everything, with history</span>
-      <h2>Migrate the whole database</h2>
+      <h2>Database Migration</h2>
       <p class="lead">A migration script reads TestLink 1.9's database (MySQL, MariaDB or PostgreSQL) and moves it into Tessick in one transaction, keeping TestLink's ids.</p>
     </div>
     <div class="cards">
@@ -165,7 +165,7 @@
   <div class="wrap two-col">
     <div>
       <span class="eyebrow">Day-one compatible</span>
-      <h2>Keep your TestLink scripts</h2>
+      <h2>Keep Your Scripts</h2>
       <p>Tessick answers TestLink's REST API, in its v1, v2 and custom versions, under the same <code>/lib/api/rest/</code> paths, with the same ids, bodies and answers. A script, CI job or Postman collection written for it keeps working when it's pointed at Tessick:</p>
       <div class="code">
         <pre>testlink.example.com/lib/api/rest/custom/testprojects
