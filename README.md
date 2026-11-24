@@ -16,15 +16,19 @@ Plain HTML and CSS with a few lines of JavaScript: nothing to install or build.
 ## Previewing
 
 ```bash
-mkdir -p .preview && ln -sfn .. .preview/tessick-site
-python3 -m http.server 8090 --bind 127.0.0.1 --directory .preview
+python3 -m http.server 8090 --bind 127.0.0.1
 ```
 
-Then open http://127.0.0.1:8090/tessick-site/. The link makes the site appear under `/tessick-site/`, as it does on GitHub Pages. (`.claude/launch.json` runs the same server for Claude Code's preview.)
+Then open http://127.0.0.1:8090/. (`.claude/launch.json` runs the same server for Claude Code's preview.)
 
 ## Publishing
 
-Every push to `main` publishes the site with GitHub Actions (`.github/workflows/pages.yml`). In the repo's **Settings → Pages**, the source must be **GitHub Actions**.
+Every push to `main` publishes the site with GitHub Actions (`.github/workflows/pages.yml`) at https://tessick.com. In the repo's **Settings → Pages**, the source must be **GitHub Actions** and the custom domain `tessick.com`. (A site published by a workflow ignores a `CNAME` file, so there isn't one: the domain is that setting.)
+
+The domain's DNS records, at the registrar:
+- the bare domain, `tessick.com`: four `A` records, to `185.199.108.153`, `185.199.109.153`, `185.199.110.153` and `185.199.111.153`, and four `AAAA` records, to `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153` and `2606:50c0:8003::153` (GitHub Pages' addresses);
+- `www`: a `CNAME` to `elliotnewtonmiller.github.io` (GitHub sends `www.tessick.com` on to `tessick.com`);
+- `_github-pages-challenge-ElliotNewtonMiller`: the `TXT` record GitHub gives when the domain is verified (your profile's **Settings → Pages → Add a domain**), which stops anyone else's repository from using it.
 
 ## The clips
 
@@ -52,15 +56,10 @@ Clip 7 (`ai-agent.mp4`) has its middle, from 4 s to 44 s, sped up 4× (`trim` an
 
 ## Before going public
 
-- [ ] **The contact email** for a commercial license: replace every `EMAIL_TBD` (`grep -rn EMAIL_TBD .`). Until then it shows highlighted.
-- [ ] **The domain.** Once it's bought:
-  1. Add a `CNAME` file holding it (e.g. `tessick.dev`).
-  2. Replace `https://elliotnewtonmiller.github.io/tessick-site` with `https://<domain>` everywhere (`grep -rln elliotnewtonmiller.github.io/tessick-site . | xargs sed -i 's#https://elliotnewtonmiller.github.io/tessick-site#https://<domain>#g'`).
-  3. In `404.html`, change `/tessick-site/` to `/`. At a domain the site sits at the root.
-  4. Set the DNS records:
-     - for the bare domain, `A` records to `185.199.108.153`, `185.199.109.153`, `185.199.110.153` and `185.199.111.153`, and `AAAA` records to `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153` and `2606:50c0:8003::153`;
-     - `www`, a `CNAME` to `elliotnewtonmiller.github.io`.
-  5. In GitHub, verify the domain (your profile's **Settings → Pages**), so no one else can use it. Then set it in the repo's **Settings → Pages** and tick **Enforce HTTPS**.
+- [x] **The contact email** for a commercial license: TessickTesting@gmail.com.
+- [x] **The domain:** tessick.com, in every canonical, social and sitemap address; `404.html`'s links start at `/`.
+- [ ] **Verify the domain** in GitHub, then set the DNS records above.
+- [ ] **Create the repo and turn on Pages** with the domain; once GitHub has the certificate, tick **Enforce HTTPS**.
 
 ## Getting it in front of people
 

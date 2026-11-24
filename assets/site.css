@@ -171,7 +171,6 @@ details p { color: var(--text-dim); }
 .site-footer a:hover { color: var(--text); }
 
 /* Not yet filled in: shows plainly until it is. */
-.todo { background: #fbbf24; color: #1c1300; padding: 0 4px; border-radius: 3px; }
 
 /* Section backgrounds, so the page doesn't read the same from top to bottom. */
 .tint { background: var(--bg-raised); }

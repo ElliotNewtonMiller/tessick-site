@@ -1,3 +1,0 @@
-# The local preview's folder (.claude/launch.json): a link back to the site, so it's served
-# under /tessick-site/ as on GitHub Pages.
-.preview/
