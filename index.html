@@ -58,16 +58,16 @@
   <div class="wrap">
     <div>
       <h1>Open-source test case management, <span class="grad">a modern alternative to&nbsp;TestLink</span></h1>
-      <p class="lead">Write and version your test cases, run them from the keyboard or from CI, and see what changed in every run. Tessick runs on your own server, and your TestLink projects come along with their ids.</p>
+      <p class="lead">Write and version test cases, run them from the keyboard or from CI, and see what changed in every run, on your own server.</p>
       <div class="actions">
         <a class="btn btn-primary" href="#try">Try the demo</a>
         <a class="btn btn-ghost" href="testlink/">Moving from TestLink →</a>
       </div>
       <ul class="facts">
-        <li>Free and open source</li>
+        <li>Free</li>
+        <li>Open source</li>
         <li>Self-hosted with Docker</li>
-        <li>Imports TestLink XML</li>
-        <li>Answers TestLink's REST API</li>
+        <li>Imports from TestLink</li>
       </ul>
     </div>
     <figure class="clip" style="margin:0">
@@ -79,98 +79,16 @@
   </div>
 </section>
 
-<section class="oss" id="open-source">
-  <div class="wrap">
-    <div class="oss-head">
-      <span class="eyebrow">Free and open source</span>
-      <h2>Free and Self-Hosted</h2>
-      <p class="lead">No per-user prices, no trial that runs out, and no cloud you have to trust with your test cases.</p>
-    </div>
-    <div class="pillars">
-      <div class="pillar"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12v9H4v-9"/><path d="M2 7h20v5H2z"/><path d="M12 21V7"/><path d="M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7z"/></svg><h3>Free</h3><p>As many users, projects and test cases as you like, at no cost.</p></div>
-      <div class="pillar"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg><h3>Open source</h3><p>AGPL-3.0: read the code, change it and run it your way. <a href="https://github.com/ElliotNewtonMiller/Tessick">It's on GitHub</a>.</p></div>
-      <div class="pillar"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><path d="M7 6.5h.01M7 17.5h.01"/></svg><h3>Self-hosted</h3><p>On your own server with Docker, so your test cases and results stay with you.</p></div>
-      <div class="pillar"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M2 13h20"/></svg><h3>A commercial license too</h3><p>If the AGPL's terms don't suit your organization, ask at <a href="mailto:TessickTesting@gmail.com">TessickTesting@gmail.com</a>.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="tint" id="from-testlink">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Coming from TestLink</span>
-      <h2>Bring Your Test Cases</h2>
-      <p class="lead">Your test cases, and if you want them, your history, users, and scripts written for its REST API. Pick the way that suits you; you can start small and try one project first.</p>
-    </div>
-    <div class="cards">
-      <div class="card">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m10 13-2 2 2 2M14 13l2 2-2 2"/></svg>
-        <div class="tag">About 15 minutes</div>
-        <h3>Import TestLink's XML export</h3>
-        <p>Export from TestLink's Test Specification, then import in Tessick's wizard: suites, cases, steps, keywords and custom fields, with your case ids kept. Then each test plan's export, as a plan. Nothing is written until you've seen the preview.</p>
-        <a class="more" href="testlink/#xml">How it works →</a>
-      </div>
-      <div class="card">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"/><path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg>
-        <div class="tag">Everything, with history</div>
-        <h3>Migrate the whole database</h3>
-        <p>A migration script reads a copy of TestLink's database and brings users, roles, projects, every case version, plans, builds and results with their testers and times. TestLink's ids are kept.</p>
-        <a class="more" href="testlink/#database">What comes across →</a>
-      </div>
-      <div class="card">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22v-5M9 8V2M15 8V2M18 8v5a6 6 0 0 1-12 0V8z"/></svg>
-        <div class="tag">Day-one compatible</div>
-        <h3>Keep your TestLink scripts</h3>
-        <p>Tessick answers TestLink's REST API (v1, v2 and custom). A script or CI job written for it keeps working with only the host changed, using the user's TestLink API key.</p>
-        <a class="more" href="testlink/#scripts">About the API →</a>
-      </div>
-    </div>
-    <figure class="clip clip-centre">
-      <video data-autoplay muted loop playsinline preload="none" poster="media/testlink-import.webp" width="1280" height="726" aria-label="Importing a TestLink XML export: the wizard maps custom fields, shows what it will create, and the suite tree appears">
-        <source src="media/testlink-import.mp4" type="video/mp4">
-      </video>
-      <figcaption>A TestLink XML export imported into a new project: custom fields mapped, 13 cases created, the tree ready.</figcaption>
-    </figure>
-  </div>
-</section>
-
-<section class="dots" id="try">
-  <div class="wrap two-col">
-    <div>
-      <span class="eyebrow">Try it in a minute</span>
-      <h2>Easy Demo</h2>
-      <p class="lead">With Docker and nothing to configure. A demo project comes loaded, with eight runs of results to explore and an open run to try the keyboard on.</p>
-      <div class="code terminal">
-        <div class="titlebar"><span></span><span></span><span></span><b>Terminal</b></div>
-        <button class="copy" type="button">Copy</button>
-        <pre data-copy="curl -fsSLO https://raw.githubusercontent.com/ElliotNewtonMiller/Tessick/main/docker-compose.demo.yml
-docker compose -f docker-compose.demo.yml up"><span class="prompt">$ </span>curl -fsSLO https://raw.githubusercontent.com/ElliotNewtonMiller/Tessick/main/docker-compose.demo.yml
-<span class="prompt">$ </span>docker compose -f docker-compose.demo.yml up</pre>
-      </div>
-      <p>Then open <code>http://localhost:3001</code> and sign in as <code>admin</code> / <code>tessick-demo-admin</code>. The demo listens only on your own machine, and <code>docker compose -f docker-compose.demo.yml down -v</code> removes it all.</p>
-      <p class="dim">To keep real data, <a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/deployment.md">run it for real</a>: Tessick and PostgreSQL with Docker Compose, or Node.js 22 without Docker.</p>
-    </div>
-    <figure class="clip" style="margin:0">
-      <video data-autoplay muted loop playsinline preload="none" poster="media/install.webp" width="1280" height="726" aria-label="Running the two demo commands in a terminal, then signing in to the demo">
-        <source src="media/install.mp4" type="video/mp4">
-      </video>
-      <figcaption>The two commands from the README, Docker starting the demo, and signing in.</figcaption>
-    </figure>
-  </div>
-</section>
-
 <section id="features">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">What you get</span>
-      <h2>Modern Features</h2>
+      <h2>What You Get</h2>
     </div>
 
     <div class="feature">
       <div class="feature-text">
-        <span class="label blue">Reports</span>
         <h3>Reports that say what changed</h3>
-        <p>Each run is compared with the one before: new failures, fixes and tests still failing, with their messages. Trends across runs, flaky and slow tests, and every case's history are a click away, and can be emailed on a schedule.</p>
+        <p>Each run is compared with the one before: new failures, fixes and tests still failing. Trends, flaky and slow tests and each case's history are a click away, or emailed on a schedule.</p>
         <a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/reports_api_and_mcp.md">About the reports →</a>
       </div>
       <figure class="clip" style="margin:0">
@@ -182,10 +100,9 @@ docker compose -f docker-compose.demo.yml up"><span class="prompt">$ </span>curl
 
     <div class="feature flip">
       <div class="feature-text">
-        <span class="label green">CI</span>
         <h3>Results straight from CI</h3>
-        <p>Your tests already write a JUnit XML report: send it to Tessick with one request. A run named after the build is created on first use, and its results show in the app as soon as you look. JSON works too, with screenshots, videos and logs attached.</p>
-        <a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/api_getting_started.md#5-send-results-from-ci">CI examples for GitHub Actions, GitLab, Jenkins and Azure DevOps →</a>
+        <p>Send your tests' JUnit XML report with one request, and a run named after the build appears. JSON works too, with screenshots, videos and logs attached.</p>
+        <a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/api_getting_started.md#5-send-results-from-ci">CI examples →</a>
       </div>
       <figure class="clip" style="margin:0">
         <video data-autoplay muted loop playsinline preload="none" poster="media/ci-results.webp" width="1280" height="726" aria-label="A curl command uploads a JUnit file, and the new run appears in Tessick">
@@ -196,9 +113,8 @@ docker compose -f docker-compose.demo.yml up"><span class="prompt">$ </span>curl
 
     <div class="feature">
       <div class="feature-text">
-        <span class="label violet">Specification</span>
         <h3>Test cases with versions</h3>
-        <p>A case's steps, preconditions and summary are versioned, from draft to approved. Editing an approved case makes a new draft, and approving it updates the case in every active plan. Duplicate a case to start from one you have.</p>
+        <p>Steps, preconditions and summary are versioned, from draft to approved. Editing an approved case makes a new draft, and approving it updates every active plan.</p>
       </div>
       <figure class="clip" style="margin:0">
         <video data-autoplay muted loop playsinline preload="none" poster="media/writing-a-case.webp" width="1280" height="726" aria-label="Writing a new test case: a title, steps with expected results, then approving it and adding it to the plan">
@@ -209,9 +125,8 @@ docker compose -f docker-compose.demo.yml up"><span class="prompt">$ </span>curl
 
     <div class="feature flip">
       <div class="feature-text">
-        <span class="label amber">Execution</span>
         <h3>Evidence on every result</h3>
-        <p>Paste a screenshot or drop files on the case you're testing: up to 50 on each result. Screenshots, videos, logs and Playwright traces are kept with it, from people or from CI, on disk or in S3-compatible storage.</p>
+        <p>Paste a screenshot or drop files on the case you're testing. Screenshots, videos, logs and Playwright traces are kept with the result, from people or from CI.</p>
       </div>
       <figure class="clip" style="margin:0">
         <video data-autoplay muted loop playsinline preload="none" poster="media/evidence.webp" width="1280" height="726" aria-label="Pasting a screenshot onto a failed result, then opening it in the viewer">
@@ -222,9 +137,8 @@ docker compose -f docker-compose.demo.yml up"><span class="prompt">$ </span>curl
 
     <div class="feature">
       <div class="feature-text">
-        <span class="label pink">AI agents</span>
         <h3>AI agents that write drafts</h3>
-        <p>Connect an agent such as Claude Code over MCP, and ask it to write test cases. They arrive as drafts for a person to review and approve. An agent can also read reports and record results, with only the permissions its token gives it.</p>
+        <p>Ask an agent such as Claude Code, over MCP, to write test cases: they arrive as drafts for a person to approve. It can also read reports and record results, within its token's permissions.</p>
         <a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/reports_api_and_mcp.md#mcp-for-ai-agents">Connecting an agent →</a>
       </div>
       <figure class="clip" style="margin:0">
@@ -240,33 +154,79 @@ docker compose -f docker-compose.demo.yml up"><span class="prompt">$ </span>curl
 <section class="tint" id="more">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">And more</span>
+      <h2>And More</h2>
     </div>
     <div class="grid-more">
-      <div><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg><h3><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/user_guide.md#custom-fields">Custom fields</a></h3><p>Six types on cases and suites, for every project or chosen ones, with required fields and defaults.</p></div>
-      <div><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><h3><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/user_guide.md#roles-and-overrides">Roles and permissions</a></h3><p>Editable roles, a different role per project, and per-user overrides.</p></div>
-      <div><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></svg><h3><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/user_guide.md#api-tokens">API tokens</a></h3><p>Each bound to one project and limited to the capabilities you choose, for CI and agents.</p></div>
-      <div><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><h3><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/api_getting_started.md#9-get-notified-webhooks">Webhooks</a></h3><p>Runs finishing, tests failing and imports, sent to Slack, Teams or your own code, signed and retried.</p></div>
-      <div><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><h3><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/reports_api_and_mcp.md#emailing-reports">Scheduled reports</a></h3><p>Reports emailed daily or weekly to whoever needs them, or sent once from the Reports view.</p></div>
-      <div><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5"/><path d="M21 3 14 10"/><path d="M8 21H3v-5"/><path d="M3 21l7-7"/></svg><h3>Import and export</h3><p>TestLink XML, JUnit XML, TestRail CSV, CSV and JSON in; JSON and CSV out.</p></div>
-      <div><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h12M9 12h12M9 18h12"/><path d="m3 6 1 1 2-2M3 12l1 1 2-2M3 18l1 1 2-2"/></svg><h3><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/user_guide.md#3-test-plans-and-runs">Test plans and runs</a></h3><p>A plan pins its cases at a version; each run records who did what, when.</p></div>
-      <div><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1"/><path d="M16 21h1a2 2 0 0 0 2-2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/></svg><h3><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/api_getting_started.md">REST API</a></h3><p>Everything the app does, with an interactive reference page on every server.</p></div>
-      <div><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M6 9h.01M10 9h.01M14 9h.01M18 9h.01M6 13h.01M18 13h.01M8 16h8M10 13h4"/></svg><h3><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/user_guide.md#recording-results-with-the-keyboard">Keyboard first</a></h3><p><code>j</code>/<code>k</code> to move, <code>p</code>/<code>f</code>/<code>b</code>/<code>s</code> to record, <code>/</code> to search.</p></div>
+      <div><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg><h3><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/user_guide.md#custom-fields">Custom fields</a></h3><p>Six types on cases and suites, required or with defaults.</p></div>
+      <div><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><h3><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/user_guide.md#roles-and-overrides">Roles and permissions</a></h3><p>Editable roles, a role per project, and per-user overrides.</p></div>
+      <div><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></svg><h3><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/user_guide.md#api-tokens">API tokens</a></h3><p>Each bound to one project and limited to the capabilities you choose.</p></div>
+      <div><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><h3><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/api_getting_started.md#9-get-notified-webhooks">Webhooks</a></h3><p>Runs, failures and imports sent to Slack, Teams or your own code.</p></div>
+      <div><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5"/><path d="M21 3 14 10"/><path d="M8 21H3v-5"/><path d="M3 21l7-7"/></svg><h3>Import and export</h3><p>JUnit XML, TestRail CSV, CSV and JSON in; JSON and CSV out.</p></div>
+      <div><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1"/><path d="M16 21h1a2 2 0 0 0 2-2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/></svg><h3><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/api_getting_started.md">REST API</a></h3><p>Everything the app does, with a reference page on every server.</p></div>
     </div>
   </div>
 </section>
 
-<section class="cta">
+<section id="from-testlink">
   <div class="wrap">
-    <div class="cta-box">
+    <div class="section-head">
+      <h2>Coming from TestLink</h2>
+      <p class="lead">Bring your test cases with their ids and, if you want them, your history, users and scripts. Start with one project.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m10 13-2 2 2 2M14 13l2 2-2 2"/></svg>
+        <h3>Import the XML export</h3>
+        <p>Your cases, then each test plan, through the Import wizard, with a preview before anything is written.</p>
+        <a class="more" href="testlink/#xml">How it works →</a>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"/><path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg>
+        <h3>Migrate the database</h3>
+        <p>Every case version, plan, build and result, with users and roles, keeping TestLink's ids.</p>
+        <a class="more" href="testlink/#database">What comes across →</a>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22v-5M9 8V2M15 8V2M18 8v5a6 6 0 0 1-12 0V8z"/></svg>
+        <h3>Keep your scripts</h3>
+        <p>Tessick answers TestLink's REST API, so scripts written for it need only the host changed.</p>
+        <a class="more" href="testlink/#scripts">About the API →</a>
+      </div>
+    </div>
+    <figure class="clip clip-centre">
+      <video data-autoplay muted loop playsinline preload="none" poster="media/testlink-import.webp" width="1280" height="726" aria-label="Importing a TestLink XML export: the wizard maps custom fields, shows what it will create, and the suite tree appears">
+        <source src="media/testlink-import.mp4" type="video/mp4">
+      </video>
+      <figcaption>A TestLink XML export imported: custom fields mapped, 13 cases created.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="dots" id="try">
+  <div class="wrap two-col">
+    <div>
       <h2>Try It in a Minute</h2>
-      <p class="lead">Two commands start a demo with a project already loaded. When you're ready, bring your TestLink projects across.</p>
+      <p class="lead">Two commands and Docker. A demo project comes loaded, with eight runs of results and an open run to try the keyboard on.</p>
+      <div class="code terminal">
+        <div class="titlebar"><span></span><span></span><span></span><b>Terminal</b></div>
+        <button class="copy" type="button">Copy</button>
+        <pre data-copy="curl -fsSLO https://raw.githubusercontent.com/ElliotNewtonMiller/Tessick/main/docker-compose.demo.yml
+docker compose -f docker-compose.demo.yml up"><span class="prompt">$ </span>curl -fsSLO https://raw.githubusercontent.com/ElliotNewtonMiller/Tessick/main/docker-compose.demo.yml
+<span class="prompt">$ </span>docker compose -f docker-compose.demo.yml up</pre>
+      </div>
+      <p>Then open <code>http://localhost:3001</code> and sign in as <code>admin</code> / <code>tessick-demo-admin</code>. It listens only on your machine, and <code>docker compose -f docker-compose.demo.yml down -v</code> removes it.</p>
+      <p class="dim">For real data, follow the <a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/deployment.md">deployment guide</a>: Docker Compose with PostgreSQL, or Node.js 22.</p>
+      <p class="dim">Free and open source under the AGPL-3.0. For other terms, a commercial license: <a href="mailto:TessickTesting@gmail.com">TessickTesting@gmail.com</a>.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="#try">Try the demo</a>
-        <a class="btn btn-ghost" href="testlink/">Moving from TestLink →</a>
         <a class="btn btn-ghost" href="https://github.com/ElliotNewtonMiller/Tessick">Star it on GitHub</a>
       </div>
     </div>
+    <figure class="clip" style="margin:0">
+      <video data-autoplay muted loop playsinline preload="none" poster="media/install.webp" width="1280" height="726" aria-label="Running the two demo commands in a terminal, then signing in to the demo">
+        <source src="media/install.mp4" type="video/mp4">
+      </video>
+      <figcaption>The two commands, Docker starting the demo, and signing in.</figcaption>
+    </figure>
   </div>
 </section>
 

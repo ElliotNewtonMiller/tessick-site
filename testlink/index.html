@@ -59,9 +59,8 @@
 <section class="hero">
   <div class="wrap">
     <div>
-      <span class="eyebrow">A TestLink alternative</span>
       <h1>Moving from TestLink to Tessick</h1>
-      <p class="lead">TestLink has organized a lot of teams' testing for a long time. When you're ready for something new, Tessick takes your test cases across with their ids, and, if you want them, your history, users, and scripts written for its REST API too.</p>
+      <p class="lead">Bring your test cases with their ids and, if you want them, your history, users and scripts.</p>
       <div class="actions">
         <a class="btn btn-primary" href="#xml">Start with the XML export</a>
         <a class="btn btn-ghost" href="../#try">Try the demo first</a>
@@ -80,7 +79,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Two Ways Across</h2>
-      <p class="lead">Most teams start with the XML export: it's quick, and you can try it on one project. The database migration is for when the history matters, or when scripts must keep working on day one.</p>
+      <p class="lead">Start with the XML export, on one project if you like. Migrate the database when the history matters.</p>
     </div>
     <div class="table-wrap">
       <table>
@@ -100,121 +99,76 @@
 </section>
 
 <section id="xml">
-  <div class="wrap two-col">
-    <div>
-      <span class="eyebrow">About 15 minutes</span>
-      <h2>XML Import</h2>
-      <p>No scripts and no database access:</p>
-      <ol>
-        <li>In Tessick, create a project with the <strong>same prefix</strong> as in TestLink, so <code>SHOP-331</code> stays <code>SHOP-331</code>.</li>
-        <li>In TestLink's <strong>Test Specification</strong>, click the project and <strong>Export All Test Suites</strong> as XML, with keywords and custom fields.</li>
-        <li>In Tessick, click <strong>Import</strong> and choose the file. The preview shows what will be created and writes nothing.</li>
-        <li>Decide what each TestLink custom field becomes, then <strong>Run Import</strong>.</li>
-        <li>Then each test plan: export it from TestLink's <strong>Test Plan Management</strong> and import that file the same way. Its cases come across in TestLink's order, and the preview offers to approve its drafts, since a Tessick plan takes approved cases.</li>
-      </ol>
-      <p>Importing the same file again later gives the cases already there a new version instead of making copies, so you can keep TestLink in use while you try Tessick out.</p>
-      <p><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/migrating_from_testlink.md">The full guide, step by step →</a></p>
-    </div>
-    <div>
-      <h3>What comes across</h3>
+  <div class="wrap narrow">
+    <h2>XML Import</h2>
+    <p>About 15 minutes, with no scripts and no database access:</p>
+    <ol>
+      <li>In Tessick, create a project with the <strong>same prefix</strong> as in TestLink, so <code>SHOP-331</code> stays <code>SHOP-331</code>. An id already taken gets the next free number.</li>
+      <li>In TestLink's <strong>Test Specification</strong>, <strong>Export All Test Suites</strong> as XML, with keywords and custom fields.</li>
+      <li>In Tessick, click <strong>Import</strong> and choose the file. The preview writes nothing.</li>
+      <li>Decide what each custom field becomes, then <strong>Run Import</strong>.</li>
+      <li>Export each test plan from TestLink's <strong>Test Plan Management</strong> and import it the same way. The preview offers to approve its draft cases, since a plan takes approved ones.</li>
+    </ol>
+    <details>
+      <summary>What each TestLink field becomes</summary>
       <div class="table-wrap">
-        <table>
-          <thead><tr><th>TestLink</th><th>Tessick</th></tr></thead>
-          <tbody>
-            <tr><td>Nested test suites</td><td>The same tree, in the same order</td></tr>
-            <tr><td>Case id <code>331</code></td><td><code>PREFIX-331</code></td></tr>
-            <tr><td>Summary, preconditions, steps</td><td>The same, as plain text; lists and tables kept as lines</td></tr>
-            <tr><td>Importance 1, 2, 3</td><td>Priority low, medium, high</td></tr>
-            <tr><td>Manual or automated</td><td>The same</td></tr>
-            <tr><td>Status final</td><td>Approved</td></tr>
-            <tr><td>Draft, review, rework, future</td><td>Draft</td></tr>
-            <tr><td>Obsolete or inactive</td><td>Deprecated (hidden until shown)</td></tr>
-            <tr><td>Keywords</td><td>A keywords field</td></tr>
-            <tr><td>Custom fields</td><td>Fields you create or map in the wizard</td></tr>
-          </tbody>
-        </table>
+      <table>
+        <thead><tr><th>TestLink</th><th>Tessick</th></tr></thead>
+        <tbody>
+          <tr><td>Nested test suites</td><td>The same tree, in the same order</td></tr>
+          <tr><td>Case id <code>331</code></td><td><code>PREFIX-331</code></td></tr>
+          <tr><td>Summary, preconditions, steps</td><td>The same, as plain text; lists and tables kept as lines</td></tr>
+          <tr><td>Importance 1, 2, 3</td><td>Priority low, medium, high</td></tr>
+          <tr><td>Manual or automated</td><td>The same</td></tr>
+          <tr><td>Status final</td><td>Approved</td></tr>
+          <tr><td>Draft, review, rework, future</td><td>Draft</td></tr>
+          <tr><td>Obsolete or inactive</td><td>Deprecated (hidden until shown)</td></tr>
+          <tr><td>Keywords</td><td>A keywords field</td></tr>
+          <tr><td>Custom fields</td><td>Fields you create or map in the wizard</td></tr>
+        </tbody>
+      </table>
       </div>
-    </div>
+    </details>
+    <p><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/migrating_from_testlink.md">The full guide →</a></p>
   </div>
 </section>
 
 <section id="database">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Everything, with history</span>
-      <h2>Database Migration</h2>
-      <p class="lead">A migration script reads TestLink 1.9's database (MySQL, MariaDB or PostgreSQL) and moves it into Tessick in one transaction, keeping TestLink's ids.</p>
-    </div>
-    <div class="cards">
-      <div class="card">
-        <h3>What it brings</h3>
-        <p>Users and roles, projects, suites, every case version, custom fields, keywords, test plans, builds, and results with their testers and times. Users' TestLink API keys keep working.</p>
-      </div>
-      <div class="card">
-        <h3>Try it safely</h3>
-        <p>Run it with <code>--dry-run</code> first: it does everything, prints exactly what it would bring, and writes nothing. Run it early, then again at the switch: a second run brings only what TestLink gained since.</p>
-      </div>
-      <div class="card">
-        <h3>Good to know</h3>
-        <p>Passwords aren't brought, as TestLink stores them as unsalted MD5: an admin sets them again. Requirements, attachments, milestones and tester assignments stay behind, and each build and platform becomes its own test run.</p>
-      </div>
-    </div>
-    <p style="margin-top:24px"><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/migrating_from_testlink.md#the-full-database-migration">Running the migration →</a></p>
+  <div class="wrap narrow">
+    <h2>Database Migration</h2>
+    <p>A script reads TestLink 1.9's database (MySQL, MariaDB or PostgreSQL) and moves it in one transaction, keeping TestLink's ids.</p>
+    <ul>
+      <li><strong>It brings</strong> users and roles, projects, every case version, custom fields, keywords, plans, builds, and results with their testers and times.</li>
+      <li><strong><code>--dry-run</code></strong> prints what it would bring and writes nothing. A second run brings only what TestLink gained since.</li>
+      <li><strong>Passwords</strong> aren't brought (TestLink keeps unsalted MD5): an admin sets them again.</li>
+      <li><strong>Left behind:</strong> requirements, attachments, milestones and tester assignments. Each build and platform becomes a test run.</li>
+    </ul>
+    <p><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/migrating_from_testlink.md#the-full-database-migration">Running the migration →</a></p>
   </div>
 </section>
 
 <section id="scripts">
-  <div class="wrap two-col">
-    <div>
-      <span class="eyebrow">Day-one compatible</span>
-      <h2>Keep Your Scripts</h2>
-      <p>Tessick answers TestLink's REST API, in its v1, v2 and custom versions, under the same <code>/lib/api/rest/</code> paths, with the same ids, bodies and answers. A script, CI job or Postman collection written for it keeps working when it's pointed at Tessick:</p>
-      <div class="code">
-        <pre>testlink.example.com/lib/api/rest/custom/testprojects
+  <div class="wrap narrow">
+    <h2>Keep Your Scripts</h2>
+    <p>Tessick answers TestLink's REST API (v1, v2 and custom) under the same <code>/lib/api/rest/</code> paths, with the same ids and answers. Scripts, CI jobs and Postman collections need only the host changed, with the user's TestLink API key (brought by the migration, or made in Tessick). The older XML-RPC API isn't answered.</p>
+    <div class="code">
+      <pre>testlink.example.com/lib/api/rest/custom/testprojects
 tessick.example.com/lib/api/rest/custom/testprojects</pre>
-      </div>
-      <p>Each user's TestLink API key comes across with the migration, or they make one in Tessick. Tessick doesn't answer TestLink's older XML-RPC API.</p>
-      <p><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/testlink_compat_api.md">The TestLink-compatible API →</a></p>
     </div>
-    <div>
-      <h3>What's different once you've moved</h3>
-      <ul>
-        <li><strong>Builds are test runs</strong>, and a test plan has as many as you like.</li>
-        <li><strong>Recording results is keyboard-driven:</strong> <code>j</code>/<code>k</code> move through the queue, and <code>p</code>/<code>f</code>/<code>b</code>/<code>s</code> record pass, fail, blocked or skipped.</li>
-        <li><strong>CI sends its JUnit XML report</strong> straight to a run, created by build name on first use.</li>
-        <li><strong>A case's content is versioned:</strong> editing an approved case makes a new draft to approve.</li>
-        <li><strong>Reports are built in:</strong> run comparisons, trends, flaky and slow tests, emailed on a schedule if you like.</li>
-      </ul>
-    </div>
+    <p><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/testlink_compat_api.md">The TestLink-compatible API →</a></p>
   </div>
 </section>
 
 <section id="faq">
-  <div class="wrap" style="max-width:820px">
+  <div class="wrap narrow">
     <h2>Questions</h2>
     <details>
-      <summary>Do my test case ids change?</summary>
-      <p>No. Create the Tessick project with the same prefix as in TestLink, and <code>SHOP-331</code> stays <code>SHOP-331</code>. If an id is already taken in the project, that case gets the next free number. The database migration keeps TestLink's ids too.</p>
-    </details>
-    <details>
-      <summary>Do my automation scripts keep working?</summary>
-      <p>Scripts written for TestLink's REST API (v1, v2 and custom) do, with only the host changed and the user's TestLink API key. Tessick doesn't answer the older XML-RPC API. Tessick's own API also takes JUnit XML reports straight from CI.</p>
-    </details>
-    <details>
       <summary>Can I try it without changing TestLink?</summary>
-      <p>Yes. The XML export only reads from TestLink, and the migration reads a copy of its database. The <a href="../#try">demo</a> runs on your own machine with two commands.</p>
+      <p>Yes. The XML export only reads from TestLink, and the migration reads a copy of its database. The <a href="../#try">demo</a> runs on your own machine.</p>
     </details>
     <details>
       <summary>Do I have to move everything at once?</summary>
-      <p>No. Export one suite or one project at a time, and import the same file again after later edits in TestLink without making copies. With the migration, a second run brings only what's new. Just edit each case in one place.</p>
-    </details>
-    <details>
-      <summary>What does it cost?</summary>
-      <p>Nothing. Tessick is open source under the AGPL-3.0 and runs on your own server. A commercial license is available for organizations that need other terms: ask at <a href="mailto:TessickTesting@gmail.com">TessickTesting@gmail.com</a>.</p>
-    </details>
-    <details>
-      <summary>Something didn't come across as described</summary>
-      <p>Please <a href="https://github.com/ElliotNewtonMiller/Tessick/issues">open an issue</a> saying what it was.</p>
+      <p>No. Importing the same file again updates the cases already there instead of copying them, and a second migration run brings only what's new, so TestLink can stay in use meanwhile. Just edit each case in one place.</p>
     </details>
     <div class="actions">
       <a class="btn btn-primary" href="../#try">Try the demo</a>
