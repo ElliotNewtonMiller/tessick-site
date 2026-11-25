@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Moving from TestLink to Tessick: test cases, history and scripts</title>
-  <meta name="description" content="A TestLink alternative that brings your test cases with their ids: import TestLink's XML export, migrate the whole database with its history and users, and keep scripts written for TestLink's REST API.">
+  <meta name="description" content="A TestLink alternative that brings your test cases with their ids: import TestLink's XML exports of cases and test plans, migrate the whole database with its history and users, and keep scripts written for TestLink's REST API.">
   <link rel="canonical" href="https://tessick.com/testlink/">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Tessick">
@@ -89,7 +89,8 @@
           <tr><td>You need</td><td>TestLink's web UI</td><td>A copy of TestLink's database, Node.js 22 and Tessick's source</td></tr>
           <tr><td>Suites, cases, steps</td><td class="yes">Yes</td><td class="yes">Yes, with every version</td></tr>
           <tr><td>Custom fields and keywords</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
-          <tr><td>Plans, builds, results history</td><td class="no">No</td><td class="yes">Yes</td></tr>
+          <tr><td>Test plans</td><td class="yes">Yes, each plan's cases</td><td class="yes">Yes</td></tr>
+          <tr><td>Builds, results history</td><td class="no">No</td><td class="yes">Yes</td></tr>
           <tr><td>Users, roles, API keys</td><td class="no">No</td><td class="yes">Yes (passwords are set again)</td></tr>
           <tr><td>Requirements, attachments</td><td class="no">No</td><td class="no">No</td></tr>
         </tbody>
@@ -109,6 +110,7 @@
         <li>In TestLink's <strong>Test Specification</strong>, click the project and <strong>Export All Test Suites</strong> as XML, with keywords and custom fields.</li>
         <li>In Tessick, click <strong>Import</strong> and choose the file. The preview shows what will be created and writes nothing.</li>
         <li>Decide what each TestLink custom field becomes, then <strong>Run Import</strong>.</li>
+        <li>Then each test plan: export it from TestLink's <strong>Test Plan Management</strong> and import that file the same way. Its cases come across in TestLink's order, and the preview offers to approve its drafts, since a Tessick plan takes approved cases.</li>
       </ol>
       <p>Importing the same file again later gives the cases already there a new version instead of making copies, so you can keep TestLink in use while you try Tessick out.</p>
       <p><a href="https://github.com/ElliotNewtonMiller/Tessick/blob/main/docs/migrating_from_testlink.md">The full guide, step by step →</a></p>
